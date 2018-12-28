@@ -1,8 +1,8 @@
-public class NQueen {
+public class eightQueen {
     private int row;
     private int column;
 
-    public NQueen(int row, int column) {
+    public eightQueen(int row, int column) {
         this.row = row;
         this.column = column;
     }
