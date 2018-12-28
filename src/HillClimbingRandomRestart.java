@@ -7,17 +7,17 @@ public class HillClimbingRandomRestart {
     private static int randomRestarts = 0;
 
     //Method to create a new random board
-    public static NQueen[] generateBoard() {
-        NQueen[] startBoard = new NQueen[8];
+    public static eightQueen[] generateBoard() {
+        eightQueen[] startBoard = new NQueen[8];
         Random rndm = new Random();
         for(int i=0; i<8; i++){
-            startBoard[i] = new NQueen(rndm.nextInt(8), i);
+            startBoard[i] = new eightQueen(rndm.nextInt(8), i);
         }
         return startBoard;
     }
 
     //Method to print the Current State
-    private static void printState (NQueen[] state) {
+    private static void printState (eightQueen[] state) {
         //Creating temporary board from the present board
         int[][] tempBoard = new int[8][8];
         for (int i=0; i<8; i++) {
@@ -34,7 +34,7 @@ public class HillClimbingRandomRestart {
     }
 
     // Method to find Heuristics of a state
-    public static int findHeuristic (NQueen[] state) {
+    public static int findHeuristic (eightQueen[] state) {
         int heuristic = 0;
         for (int i = 0; i< state.length; i++) {
             for (int j=i+1; j<state.length; j++ ) {
